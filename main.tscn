@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://6ca0kkt1rwhq"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_awypo"]
+[ext_resource type="PackedScene" uid="uid://d3o47nh2lqq5l" path="res://ship_segment.tscn" id="2_ee4us"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_awypo")
+ship_scene = ExtResource("2_ee4us")
+
+[node name="Background" type="Sprite2D" parent="."]
