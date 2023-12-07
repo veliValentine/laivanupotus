@@ -1,9 +1,78 @@
-<mxfile host="app.diagrams.net" modified="2023-12-07T08:59:37.146Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" version="21.6.2" etag="JlUiGztWRiGA_UfAie6Q" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-07T09:11:04.152Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="4rCOomey0x48WN4E0olr" version="21.6.2" type="github">
   <diagram name="Page-1" id="TgfR-wHRvrL1EwRK-BiK">
-    <mxGraphModel>
+    <mxGraphModel dx="1702" dy="445" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="90" width="540" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-6" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="450" y="155" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-8" value="A B C D E F G J K" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="130" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-9" value="A B C D E F G J K" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="335" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-10" value="1&lt;br&gt;2&lt;br&gt;3&lt;br&gt;4&lt;br&gt;5&lt;br&gt;6&lt;br&gt;7&lt;br&gt;8&lt;br&gt;9&lt;br&gt;10" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="155" width="30" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-11" value="1&lt;br&gt;2&lt;br&gt;3&lt;br&gt;4&lt;br&gt;5&lt;br&gt;6&lt;br&gt;7&lt;br&gt;8&lt;br&gt;9&lt;br&gt;10" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="155" width="30" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-43" value="PLACE FLEET" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="100" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-53" value="&lt;h1&gt;Pregame Scene&lt;/h1&gt;&lt;div&gt;User enters this scene from the main menu when starting new game.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;In this scene user is able to place its fleet. Ships can be placed on the coordinate grip. Ships can not be side by side. They also can not be out of the field.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;After user has placed all the ships according to rules they are able to move to the next scene.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="85" width="190" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-60" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="175" y="220" width="205" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-42" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="LxHWQPCuDIjF5UvuarJM-60">
+          <mxGeometry width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-44" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="LxHWQPCuDIjF5UvuarJM-60">
+          <mxGeometry x="55" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-45" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="LxHWQPCuDIjF5UvuarJM-60">
+          <mxGeometry x="110" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-46" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="LxHWQPCuDIjF5UvuarJM-60">
+          <mxGeometry x="160" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-47" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="LxHWQPCuDIjF5UvuarJM-60">
+          <mxGeometry y="30" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-48" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="LxHWQPCuDIjF5UvuarJM-60">
+          <mxGeometry x="75" y="30" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-49" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="LxHWQPCuDIjF5UvuarJM-60">
+          <mxGeometry x="145" y="30" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-50" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="LxHWQPCuDIjF5UvuarJM-60">
+          <mxGeometry y="60" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-51" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="LxHWQPCuDIjF5UvuarJM-60">
+          <mxGeometry x="95" y="60" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-52" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="LxHWQPCuDIjF5UvuarJM-60">
+          <mxGeometry y="95" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-61" value="Ships can not tocuh side by side" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="175" y="150" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-56" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="350" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LxHWQPCuDIjF5UvuarJM-57" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;width=8.61111111111111;endSize=5.0472222222222225;endWidth=16.666666666666668;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="626.25" y="369.8566666666667" as="sourcePoint" />
+            <mxPoint x="663.75" y="369.8566666666667" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
