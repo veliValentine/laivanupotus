@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckwtrn0il1j7s"]
+
+[ext_resource type="Script" path="res://hud/hud.gd" id="1_7o6cd"]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_7o6cd")
+
+[node name="PlaceShipsButton" type="CheckButton" parent="."]
+self_modulate = Color(0, 1, 0, 1)
+top_level = true
+offset_left = 25.0
+offset_top = 669.0
+offset_right = 160.0
+offset_bottom = 700.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Place Ships"
+
+[connection signal="pressed" from="PlaceShipsButton" to="." method="_on_place_ships_button_pressed"]
