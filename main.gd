@@ -8,9 +8,6 @@ var SCREEN_HEIGHT = 720
 var cells: int = 10
 var cell_size: int = 50
 
-@export var HORIZONTAL_SHIP: Vector2 = Vector2(1,0)
-@export var VERTICAL_SHIP: Vector2 = Vector2(0,1)
-
 var ships: Array = [Vector2(5,5)]
 
 
