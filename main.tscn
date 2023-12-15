@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_awypo"]
 [ext_resource type="PackedScene" uid="uid://d3o47nh2lqq5l" path="res://ship_segment.tscn" id="2_ee4us"]
-[ext_resource type="Texture2D" uid="uid://cxp22b55vgth" path="res://assets/background.png" id="3_5fcit"]
+[ext_resource type="PackedScene" uid="uid://cuejotnek25ku" path="res://background.tscn" id="3_b57ei"]
 
 [sub_resource type="GDScript" id="GDScript_fpdbq"]
 script/source = "extends CheckButton
@@ -22,16 +22,12 @@ func _process(delta):
 script = ExtResource("1_awypo")
 ship_scene = ExtResource("2_ee4us")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(1200, 541)
-texture = ExtResource("3_5fcit")
-
 [node name="PlaceShipsButton" type="CheckButton" parent="."]
 self_modulate = Color(0, 1, 0, 1)
-offset_left = 61.0
-offset_top = 968.0
-offset_right = 196.0
-offset_bottom = 999.0
+offset_left = 25.0
+offset_top = 669.0
+offset_right = 160.0
+offset_bottom = 700.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -41,5 +37,7 @@ theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 text = "Place Ships"
 script = SubResource("GDScript_fpdbq")
+
+[node name="Background" parent="." instance=ExtResource("3_b57ei")]
 
 [connection signal="pressed" from="PlaceShipsButton" to="." method="_on_place_ships_button_pressed"]

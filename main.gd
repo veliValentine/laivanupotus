@@ -2,6 +2,9 @@ extends Node2D
 
 @export var ship_scene: PackedScene
 
+var SCREEN_WIDTH = 1280
+var SCREEN_HEIGHT = 720
+
 var cells: int = 10
 var cell_size: int = 50
 
@@ -15,7 +18,7 @@ var ships: Array = [Vector2(5,5)]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$PlaceShipsButton.button_pressed = is_place_ships
-
+	
 func _on_place_ships_button_pressed():
 	reverse_is_place_ships()
 	if is_place_ships:
