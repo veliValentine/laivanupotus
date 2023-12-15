@@ -8,38 +8,33 @@ var cell_size: int = 50
 @export var HORIZONTAL_SHIP: Vector2 = Vector2(1,0)
 @export var VERTICAL_SHIP: Vector2 = Vector2(0,1)
 
-var is_place_ships: bool = false
+var is_place_ships: bool = true
 
-var ships: Array
+var ships: Array = [Vector2(5,5)]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	new_game()
+	$PlaceShipsButton.button_pressed = is_place_ships
 
-func new_game():
-	generate_ships()
+func _on_place_ships_button_pressed():
+	reverse_is_place_ships()
+	if is_place_ships:
+		handle_ship_placements()
+	else:
+		draw_ships()
+	
+func reverse_is_place_ships():
+	is_place_ships = is_place_ships != true
 
-func generate_ships():
-	pass
+func handle_ship_placements():
+	print("handle ship placements")
 
-func add_ship(start: Vector2, direction: Vector2, length: int):
-	print(start, direction, length)
-	for i in range(length):
-		add_segment(start + direction * i)
+func draw_ships():
+	print("draw ships")
+	for ship in ships:
+		add_segment(ship)
 
 func add_segment(segment_position: Vector2):
-	print("poop",segment_position)
-	ships.append(segment_position)
 	var shipSegment = ship_scene.instantiate()
 	shipSegment.position = (segment_position * cell_size) + Vector2(0, cell_size)
 	add_child(shipSegment)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
-
-
-func _on_place_ships_button_pressed():
-	is_place_ships = is_place_ships != true
-	print(is_place_ships)
-	
