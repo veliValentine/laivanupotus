@@ -20,6 +20,8 @@ func _draw():
 	draw_grid(sea_opponent, size)
 	draw_axis_labels(sea_player, size)
 	draw_axis_labels(sea_opponent, size)
+	draw_title(sea_player, "ALLY SHIPS", size)
+	draw_title(sea_opponent, "OPPONENT", size)
 	
 
 func draw_background():
@@ -73,3 +75,13 @@ func get_label_base():
 	label.add_theme_color_override("font_color", Color.BLACK)
 	label.add_theme_font_size_override("font_size", 34)
 	return label
+
+func draw_title(start_position, text, size):
+	var label = Label.new()
+	label.add_theme_color_override("font_color", Color.BLACK)
+	label.add_theme_font_size_override("font_size", 50)
+	label.text = text
+	var position_offset = Vector2(cell_size * 2, -cell_size * 2.2)
+	label.set_position(start_position + position_offset)
+	print(label.size)
+	add_child(label)
