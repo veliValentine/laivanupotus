@@ -1,8 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://6ca0kkt1rwhq"]
+[gd_scene load_steps=5 format=3 uid="uid://6ca0kkt1rwhq"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_awypo"]
 [ext_resource type="PackedScene" uid="uid://d3o47nh2lqq5l" path="res://ship_segment.tscn" id="2_ee4us"]
 [ext_resource type="Texture2D" uid="uid://cxp22b55vgth" path="res://assets/background.png" id="3_5fcit"]
+
+[sub_resource type="GDScript" id="GDScript_fpdbq"]
+script/source = "extends CheckButton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_awypo")
@@ -11,3 +25,21 @@ ship_scene = ExtResource("2_ee4us")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(1200, 541)
 texture = ExtResource("3_5fcit")
+
+[node name="PlaceShipsButton" type="CheckButton" parent="."]
+self_modulate = Color(0, 1, 0, 1)
+offset_left = 61.0
+offset_top = 968.0
+offset_right = 196.0
+offset_bottom = 999.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Place Ships"
+script = SubResource("GDScript_fpdbq")
+
+[connection signal="pressed" from="PlaceShipsButton" to="." method="_on_place_ships_button_pressed"]
