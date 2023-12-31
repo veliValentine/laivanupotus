@@ -5,6 +5,9 @@ var sea_area = Vector2(sea_size, sea_size)
 var width_margin = (Settings.SCREEN_WIDTH / 2 - sea_size) / 2
 var height_margin = (Settings.SCREEN_HEIGHT - sea_size) / 2
 
+var LINE_WIDTH = 3
+var LINE_COLOR = Color.BLACK
+
 @export var PLAYER_SEA_POSITION = Vector2(width_margin, height_margin)
 @export var OPPONENT_SEA_POSITION = Vector2(Settings.SCREEN_WIDTH - width_margin - sea_size, height_margin)
 
@@ -34,13 +37,13 @@ func draw_horizontal_lines(sea_position):
 	for i in Settings.CELLS + 1:
 		var from = sea_position + Vector2(0, Settings.CELL_SIZE * i) + Vector2(-Settings.CELL_SIZE / 2,0)
 		var to_horizontal = from + Vector2(sea_size + 1 * Settings.CELL_SIZE, 0)
-		draw_line(from, to_horizontal, Color.BLACK, 3)
+		draw_line(from, to_horizontal, LINE_COLOR, LINE_WIDTH)
 
 func draw_vertical_lines(sea_position):
 	for i in Settings.CELLS + 1:
 		var from = sea_position + Vector2(Settings.CELL_SIZE * i, 0) + Vector2(0, -Settings.CELL_SIZE / 2)
 		var to_horizontal = from + Vector2(0,sea_size + 1 * Settings.CELL_SIZE)
-		draw_line(from, to_horizontal, Color.BLACK, 3)
+		draw_line(from, to_horizontal, LINE_COLOR, LINE_WIDTH)
 
 func draw_axis_labels(sea_position):
 	draw_alphabets(sea_position)
