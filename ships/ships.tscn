@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cumrccwvu4bmw"]
+
+[ext_resource type="Script" path="res://ships/ships.gd" id="1_rwo1d"]
+
+[node name="Ships" type="Node"]
+script = ExtResource("1_rwo1d")

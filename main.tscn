@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://6ca0kkt1rwhq"]
+[gd_scene load_steps=6 format=3 uid="uid://6ca0kkt1rwhq"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_awypo"]
-[ext_resource type="PackedScene" uid="uid://d3o47nh2lqq5l" path="res://ship_segment.tscn" id="2_ee4us"]
+[ext_resource type="PackedScene" uid="uid://d3o47nh2lqq5l" path="res://ships/ship_segment.tscn" id="2_ee4us"]
 [ext_resource type="PackedScene" uid="uid://benxyf0dtc5to" path="res://background/background.tscn" id="3_qkqjl"]
 [ext_resource type="PackedScene" uid="uid://ckwtrn0il1j7s" path="res://hud/hud.tscn" id="4_8pkv4"]
+[ext_resource type="PackedScene" uid="uid://cumrccwvu4bmw" path="res://ships/ships.tscn" id="5_l5jae"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_awypo")
@@ -13,4 +14,7 @@ ship_scene = ExtResource("2_ee4us")
 
 [node name="Hud" parent="." instance=ExtResource("4_8pkv4")]
 
+[node name="Ships" parent="." instance=ExtResource("5_l5jae")]
+
 [connection signal="toggle_place_ships" from="Hud" to="." method="_on_hud_toggle_place_ships"]
+[connection signal="ship_placed" from="Ships" to="." method="_on_ships_ship_placed"]
