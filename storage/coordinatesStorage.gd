@@ -29,6 +29,15 @@ func get_from_storage(position: Vector2):
 func get_all():
 	return storage
 
+func get_all_as_vectors():
+	var vectors = []
+	for x_key in storage:
+		for y_key in storage[x_key]:
+			var value = get_from_storage(Vector2(x_key, y_key))
+			if value != default_value:
+					vectors.append(Vector3(x_key, y_key, value))
+	return vectors
+
 func set_default_value(defaultValue):
 	default_value = defaultValue
 	

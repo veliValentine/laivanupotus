@@ -1,14 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://6ca0kkt1rwhq"]
+[gd_scene load_steps=9 format=3 uid="uid://6ca0kkt1rwhq"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_awypo"]
 [ext_resource type="PackedScene" uid="uid://d3o47nh2lqq5l" path="res://ships/ship_segment.tscn" id="2_ee4us"]
+[ext_resource type="PackedScene" uid="uid://dffhjho27id27" path="res://markers/hit_marker.tscn" id="3_k5jqr"]
 [ext_resource type="PackedScene" uid="uid://benxyf0dtc5to" path="res://background/background.tscn" id="3_qkqjl"]
 [ext_resource type="PackedScene" uid="uid://ckwtrn0il1j7s" path="res://hud/hud.tscn" id="4_8pkv4"]
+[ext_resource type="PackedScene" uid="uid://c0m17au8leewl" path="res://markers/miss_marker.tscn" id="4_qwhub"]
 [ext_resource type="PackedScene" uid="uid://cumrccwvu4bmw" path="res://ships/ships.tscn" id="5_l5jae"]
+[ext_resource type="PackedScene" uid="uid://j3hffbp7igkc" path="res://markers/markers.tscn" id="6_7qg00"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_awypo")
 ship_scene = ExtResource("2_ee4us")
+hit_scene = ExtResource("3_k5jqr")
+miss_scene = ExtResource("4_qwhub")
 
 [node name="Background" parent="." instance=ExtResource("3_qkqjl")]
 
@@ -16,5 +21,11 @@ ship_scene = ExtResource("2_ee4us")
 
 [node name="Ships" parent="." instance=ExtResource("5_l5jae")]
 
+[node name="PlayerMarkers" parent="." instance=ExtResource("6_7qg00")]
+
+[node name="OpponentMarkers" parent="." instance=ExtResource("6_7qg00")]
+
 [connection signal="toggle_place_ships" from="Hud" to="." method="_on_hud_toggle_place_ships"]
 [connection signal="ship_placed" from="Ships" to="." method="_on_ships_ship_placed"]
+[connection signal="marker_placed" from="PlayerMarkers" to="." method="_on_player_markers_marker_placed"]
+[connection signal="marker_placed" from="OpponentMarkers" to="." method="_on_opponent_markers_marker_placed"]

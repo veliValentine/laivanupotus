@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0m17au8leewl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lqar3"]
+bg_color = Color(1, 0.917647, 0, 1)
+
+[node name="MissMarker" type="Panel" groups=["markers", "miss_markers"]]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = -615.0
+offset_bottom = -335.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lqar3")
