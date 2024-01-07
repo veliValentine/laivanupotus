@@ -25,6 +25,7 @@ miss_scene = ExtResource("4_qwhub")
 
 [node name="OpponentMarkers" parent="." instance=ExtResource("6_7qg00")]
 
+[connection signal="marked_changed" from="Hud" to="." method="_on_hud_marked_changed"]
 [connection signal="toggle_place_ships" from="Hud" to="." method="_on_hud_toggle_place_ships"]
 [connection signal="ship_placed" from="Ships" to="." method="_on_ships_ship_placed"]
 [connection signal="marker_placed" from="PlayerMarkers" to="." method="_on_player_markers_marker_placed"]

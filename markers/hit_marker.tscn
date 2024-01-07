@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dffhjho27id27"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1j56m"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vaw8k"]
 bg_color = Color(0.933333, 0.294118, 0.168627, 1)
 
 [node name="HitMarker" type="Panel" groups=["hit_markers", "markers"]]
@@ -15,4 +15,4 @@ offset_right = 5.0
 offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_1j56m")
+theme_override_styles/panel = SubResource("StyleBoxFlat_vaw8k")

@@ -4,7 +4,7 @@ extends Node2D
 @export var hit_scene: PackedScene
 @export var miss_scene: PackedScene
 
-func _ready():	
+func _ready():
 	$Ships.is_place_ships_enabled = $Hud.is_place_ships
 	$Ships.SEA_POSITION = $Background.PLAYER_SEA_POSITION
 	$PlayerMarkers.is_place_markers_enabled = !$Hud.is_place_ships
@@ -18,8 +18,21 @@ func _on_hud_toggle_place_ships():
 	$PlayerMarkers.is_place_markers_enabled = !$Hud.is_place_ships
 	$OpponentMarkers.is_place_markers_enabled = !$Hud.is_place_ships
 
+func _on_hud_marked_changed():
+	var hud_marker = $Hud.selected_marker_id
+	if hud_marker == 0:
+		$PlayerMarkers.set_empty_markers()
+		$OpponentMarkers.set_empty_markers()
+	if hud_marker == 1:
+		$PlayerMarkers.set_miss_markers()
+		$OpponentMarkers.set_miss_markers()
+	if hud_marker == 2:
+		$PlayerMarkers.set_hit_markers()
+		$OpponentMarkers.set_hit_markers()
+
 func _on_ships_ship_placed():
 	draw_ships()
+	update_markers()
 
 func draw_ships():
 	clear_ship_segments()
@@ -59,10 +72,12 @@ func handle_markers(markers, offset: Vector2):
 		var position = Vector2(marker.x, marker.y)
 		var marker_type = marker.z
 		if  $PlayerMarkers.is_hit_marker(marker_type):
-			draw_marker(hit_scene.instantiate(), position, offset)
+			draw_marker(hit_scene, position, offset)
 		if $PlayerMarkers.is_miss_marker(marker_type):
-			draw_marker(miss_scene.instantiate(), position, offset)
+			draw_marker(miss_scene, position, offset)
 
-func draw_marker(scene: Node, position: Vector2, offset_position: Vector2):
-	scene.position = offset_position + ((position + Vector2(0.25, 0.25)) * Settings.CELL_SIZE)
-	add_child(scene)
+func draw_marker(scene: PackedScene, position: Vector2, offset_position: Vector2):
+	var marger_segment = scene.instantiate()
+	marger_segment.position = offset_position + (position + Vector2(0.25, 0.25)) * Settings.CELL_SIZE
+	add_child(marger_segment)
+

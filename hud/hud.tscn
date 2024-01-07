@@ -8,10 +8,14 @@ script = ExtResource("1_7o6cd")
 [node name="PlaceShipsButton" type="CheckButton" parent="."]
 self_modulate = Color(0, 1, 0, 1)
 top_level = true
-offset_left = 25.0
-offset_top = 669.0
-offset_right = 160.0
-offset_bottom = 700.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -70.0
+offset_right = 150.0
+offset_bottom = -30.0
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -21,4 +25,32 @@ theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 text = "Place Ships"
 
+[node name="MarkerSelector" type="OptionButton" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -105.0
+offset_top = -60.0
+offset_right = 45.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+item_count = 4
+selected = 0
+allow_reselect = true
+popup/item_0/text = "Select Marker"
+popup/item_0/id = 3
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Clear Marker"
+popup/item_1/id = 0
+popup/item_2/text = "Miss"
+popup/item_2/id = 1
+popup/item_3/text = "Hit"
+popup/item_3/id = 2
+
 [connection signal="pressed" from="PlaceShipsButton" to="." method="_on_place_ships_button_pressed"]
+[connection signal="item_selected" from="MarkerSelector" to="." method="_on_selector_item_selected"]
