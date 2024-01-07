@@ -14,8 +14,9 @@ func _on_ships_ship_placed():
 
 func draw_ships():
 	clear_ship_segments()
-	for ships_x in $Ships.ships:
-		for ships_y in $Ships.ships[ships_x]:
+	var ships = $Ships.get_ships()
+	for ships_x in ships:
+		for ships_y in ships[ships_x]:
 			var ship_position = Vector2(ships_x, ships_y)
 			add_segment(ship_position)
 

@@ -1,3 +1,4 @@
+class_name Coordinates
 extends Node
 
 var DEFAULT_OFFSET_POSITION = Vector2(0,0)
