@@ -53,8 +53,9 @@ popup/item_3/text = "Hit"
 popup/item_3/id = 2
 
 [node name="NewGameDialog" type="ConfirmationDialog" parent="."]
-initial_position = 1
+position = Vector2i(524, 240)
 size = Vector2i(300, 150)
+visible = true
 min_size = Vector2i(300, 70)
 ok_button_text = "New Game"
 dialog_text = "Want to start new game?"
