@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1gnskrs2ni8i"]
+
+[ext_resource type="Script" path="res://coordinates/coordinates.gd" id="1_1o6lx"]
+
+[node name="Coordinates" type="Node"]
+script = ExtResource("1_1o6lx")
