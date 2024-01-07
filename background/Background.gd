@@ -2,14 +2,20 @@ extends Node2D
 
 var sea_size = Settings.CELL_SIZE * Settings.CELLS
 var sea_area = Vector2(sea_size, sea_size)
-var width_margin = (Settings.SCREEN_WIDTH / 2 - sea_size) / 2
-var height_margin = (Settings.SCREEN_HEIGHT - sea_size) / 2
 
 var LINE_WIDTH = 3
 var LINE_COLOR = Color.BLACK
 
+var width_margin = (Settings.SCREEN_WIDTH / 2 - sea_size) / 2
+var height_margin = (Settings.SCREEN_HEIGHT - sea_size) / 2
 @export var PLAYER_SEA_POSITION = Vector2(width_margin, height_margin)
 @export var OPPONENT_SEA_POSITION = Vector2(Settings.SCREEN_WIDTH - width_margin - sea_size, height_margin)
+
+func _ready():
+	width_margin = (Settings.SCREEN_WIDTH / 2 - sea_size) / 2
+	height_margin = (Settings.SCREEN_HEIGHT - sea_size) / 2
+	PLAYER_SEA_POSITION = Vector2(width_margin, height_margin)
+	OPPONENT_SEA_POSITION = Vector2(Settings.SCREEN_WIDTH - width_margin - sea_size, height_margin)
 
 func _draw():
 	draw_background()
