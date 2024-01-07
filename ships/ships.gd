@@ -33,3 +33,6 @@ func handle_ship_placements(touch_position: Vector2):
 
 func get_ships():
 	return storage.get_all()
+
+func remove_ships():
+	storage.remove_all()

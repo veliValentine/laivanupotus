@@ -2,6 +2,7 @@ extends CanvasLayer
 
 signal toggle_place_ships
 signal marked_changed
+signal new_game_started
 
 @export var is_place_ships: bool = true
 
@@ -19,3 +20,16 @@ func _on_place_ships_button_pressed():
 func _on_selector_item_selected(index):
 	selected_marker_id = $MarkerSelector.get_item_id(index)
 	marked_changed.emit()
+
+
+func _on_new_game_button_pressed():
+	$NewGameDialog.visible = true
+
+
+func _on_new_game_dialog_confirmed():
+	$NewGameDialog.visible = false
+	new_game_started.emit()
+
+
+func _on_new_game_dialog_canceled():
+	$NewGameDialog.visible = false

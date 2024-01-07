@@ -40,4 +40,6 @@ func get_all_as_vectors():
 
 func set_default_value(defaultValue):
 	default_value = defaultValue
-	
+
+func remove_all():
+	storage = {}

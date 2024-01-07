@@ -30,6 +30,13 @@ func _on_hud_marked_changed():
 		$PlayerMarkers.set_hit_markers()
 		$OpponentMarkers.set_hit_markers()
 
+func _on_hud_new_game_started():
+	$Ships.remove_ships()
+	$PlayerMarkers.remove_markers()
+	$OpponentMarkers.remove_markers()
+	clear_ship_segments()
+	clear_markers()
+
 func _on_ships_ship_placed():
 	draw_ships()
 	update_markers()
@@ -80,4 +87,3 @@ func draw_marker(scene: PackedScene, position: Vector2, offset_position: Vector2
 	var marger_segment = scene.instantiate()
 	marger_segment.position = offset_position + (position + Vector2(0.25, 0.25)) * Settings.CELL_SIZE
 	add_child(marger_segment)
-

@@ -42,6 +42,9 @@ func update_marker(marker: Markers):
 func get_storage():
 	return marker_storage
 
+func remove_markers():
+	marker_storage.remove_all()
+
 func set_hit_markers():
 	update_marker(Markers.HIT)
 

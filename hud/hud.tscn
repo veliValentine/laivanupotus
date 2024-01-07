@@ -52,5 +52,30 @@ popup/item_2/id = 1
 popup/item_3/text = "Hit"
 popup/item_3/id = 2
 
+[node name="NewGameDialog" type="ConfirmationDialog" parent="."]
+initial_position = 1
+size = Vector2i(300, 150)
+min_size = Vector2i(300, 70)
+ok_button_text = "New Game"
+dialog_text = "Want to start new game?"
+
+[node name="NewGameButton" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -166.0
+offset_top = -60.0
+offset_right = -73.0
+offset_bottom = -29.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+text = "New Game"
+
 [connection signal="pressed" from="PlaceShipsButton" to="." method="_on_place_ships_button_pressed"]
 [connection signal="item_selected" from="MarkerSelector" to="." method="_on_selector_item_selected"]
+[connection signal="canceled" from="NewGameDialog" to="." method="_on_new_game_dialog_canceled"]
+[connection signal="confirmed" from="NewGameDialog" to="." method="_on_new_game_dialog_confirmed"]
+[connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
