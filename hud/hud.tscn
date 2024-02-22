@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckwtrn0il1j7s"]
+[gd_scene load_steps=3 format=3 uid="uid://ckwtrn0il1j7s"]
 
 [ext_resource type="Script" path="res://hud/hud.gd" id="1_7o6cd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_830a8"]
+size = Vector2(100, 50)
 
 [node name="Hud" type="CanvasLayer"]
 script = ExtResource("1_7o6cd")
@@ -16,6 +19,7 @@ offset_right = 150.0
 offset_bottom = -30.0
 grow_vertical = 0
 scale = Vector2(1.5, 1.5)
+size_flags_stretch_ratio = 1.5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -53,7 +57,7 @@ popup/item_3/text = "Hit"
 popup/item_3/id = 2
 
 [node name="NewGameDialog" type="ConfirmationDialog" parent="."]
-position = Vector2i(524, 240)
+position = Vector2i(365, 240)
 size = Vector2i(300, 150)
 visible = true
 min_size = Vector2i(300, 70)
@@ -74,6 +78,9 @@ grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(1.5, 1.5)
 text = "New Game"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+shape = SubResource("RectangleShape2D_830a8")
 
 [connection signal="pressed" from="PlaceShipsButton" to="." method="_on_place_ships_button_pressed"]
 [connection signal="item_selected" from="MarkerSelector" to="." method="_on_selector_item_selected"]
